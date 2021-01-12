@@ -1,0 +1,8 @@
+*~
+*.mat
+
+.DS_Store
+loci_tools.jar
+
+/bfmatlab/
+/private/codegen/
