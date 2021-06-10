@@ -4,7 +4,7 @@ function [job,userStatus] = pairSpots(job,opts)
 % Copyright (c) 2017 C. A. Smith
 
 %% GET REQUIRED IMAGE AND METADATA
-[md, reader] = kitOpenMovie(fullfile(job.movieDirectory,job.movie),job.metadata);
+[md, reader] = kitOpenMovie(fullfile(job.movieDirectory,job.ROI.movie),job.metadata);
 movieIdx = 1; %job.ROI only has one entry
 
 % get crop information, if any
@@ -250,12 +250,12 @@ while ~isempty(unallocatedIdx)
             hold on
             % origin coordinates in white
             scatter(iCoordsPix(2),iCoordsPix(1),'xw','sizeData',200,'LineWidth',1.25);
-            % unallocated in green
-            scatter(unallCoordsPix(:,2),unallCoordsPix(:,1),'xg','sizeData',200,'LineWidth',1.25);
-            % unpaired in yellow
-            scatter(unpairedCoordsPix(:,2),unpairedCoordsPix(:,1),'xy','sizeData',200,'LineWidth',1.25);
-            % paired in red
-            scatter(pairedCoordsPix(:,2),pairedCoordsPix(:,1),'xr','sizeData',200,'LineWidth',1.25);
+            %% unallocated in green
+            %scatter(unallCoordsPix(:,2),unallCoordsPix(:,1),'xg','sizeData',200,'LineWidth',1.25);
+            %% unpaired in yellow
+            %scatter(unpairedCoordsPix(:,2),unpairedCoordsPix(:,1),'xy','sizeData',200,'LineWidth',1.25);
+            %% paired in red
+            %scatter(pairedCoordsPix(:,2),pairedCoordsPix(:,1),'xr','sizeData',200,'LineWidth',1.25);
             
             subplot(2,4,[1,2,5,6])
             % get zoomed image

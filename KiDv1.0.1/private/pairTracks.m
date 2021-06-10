@@ -7,7 +7,7 @@ function [job,userStatus] = pairTracks(job,opts)
 dragTails = 5;
 
 %% GET REQUIRED IMAGE AND METADATA
-[md, reader] = kitOpenMovie(fullfile(job.movieDirectory,job.movie),job.metadata);
+[md, reader] = kitOpenMovie(fullfile(job.movieDirectory,job.ROI.movie),job.metadata);
 movieIdx = job.index;
 
 % get crop information, if any

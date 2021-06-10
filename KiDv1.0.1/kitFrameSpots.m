@@ -2,7 +2,7 @@ function [spots,spotsPix,img]=kitFrameSpots(filename,channel)
 
 job = kitDefaultOptions();
 job.ROI.movie = filename;
-[crop, cropSize] = kitCropMovie(job.movie);
+[crop, cropSize] = kitCropMovie(job.ROI.movie);
 job.ROI.crop = crop;
 job.ROI.cropSize = cropSize;
 
